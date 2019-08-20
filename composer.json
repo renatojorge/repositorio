@@ -1,0 +1,24 @@
+{
+    "name": "pc/notification",
+    "description": "Biblioteca para gerar notificacao via email",
+    "type": "library",
+    "license": "mit",
+    "authors": [
+        {
+            "name": "Renato",
+            "email": "Updeweloper@gmail.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {
+        "phpmailer/phpmailer": "6.0.1"
+    },
+    "config":{
+        "vendor-dir": "libs_ext"
+    },
+    "autoload":{
+        "psr-4":{
+            "notification\\": "__app"
+        }
+    }
+}
