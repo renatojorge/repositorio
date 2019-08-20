@@ -9,21 +9,21 @@ class Email{
 
 	private $email = \stdClass::class;
 
-public function __construct(){
+public function __construct($SMTPDebug,$smtp, $smtEmail, $pin, $smtpSicure, $port,$setEmail, $setname){
 	
 	$this->mail = new PHPMailer(true);
-	$this->mail->SMTPDebug = 2;                                       // Enable verbose debug output
+	$this->mail->SMTPDebug = $SMTPDebug;                                       // Enable verbose debug output
     $this->mail->isSMTP();                                            // Set mailer to use SMTP
-    $this->mail->Host       = 'smtp-mail.outlook.com';  // Specify main and backup SMTP servers
+    $this->mail->Host       = $smtp;  // Specify main and backup SMTP servers
     $this->mail->SMTPAuth   = true;                                   // Enable SMTP authentication
-    $this->mail->Username   = 'renato-mantova@outlook.com';                     // SMTP username
-    $this->mail->Password   = '*******';                               // SMTP password
-    $this->mail->SMTPSecure = 'tls';                                  // Enable TLS encryption, `ssl` also accepted
-    $this->mail->Port       = 587;                                    // TCP port to connect to
+    $this->mail->Username   = $smtEmail;                     // SMTP username
+    $this->mail->Password   = $pin;                               // SMTP password
+    $this->mail->SMTPSecure = $smtpSicure;                                  // Enable TLS encryption, `ssl` also accepted
+    $this->mail->Port       = $port;                                    // TCP port to connect to
     $this->mail->Charset = 'utf-8';
     $this->mail->setLanguage('br');
     $this->mail->isHtml(true);
-    $this->mail->setFrom('from@example.com', 'Mailer');
+    $this->mail->setFrom($setEmail, $setname);
 }
 
 public function sendEmail($subject, $body, $replyEmail, $replyName, $adressEmail, $adressName){
