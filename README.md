@@ -29,20 +29,12 @@ $email->sendEmail("SUbject", "Content", "reply@email.com", "Replay Name", "addre
 Note que toda a configuração do envio do e-mail está utilizando o método mágico construtor! Uma vez invocado o método construtor dentro da sua aplicação, seu sistema estar'á apto a efetuar os disparos.
 
 ### Developers
-* [Gustavo Web] - Desenvolvedor desta biblioteca e tutor do curso Composer na Prática!
-* [Robson V. Leite] - CEO and Founder UpInside Treinamentos
-* [UpInside Treinamentos] - Site oficial da sua escola de programação e marketing digital
+* [Renato Web] - Desenvolvedor desta biblioteca e tutor do curso Composer na Prática!
+* [Renato] - CEO and Founder UpInside Treinamentos
+* [Updeweloper] - Site oficial da sua escola de programação e marketing digital
 * [phpMailer] - Lib to send E-mail
 
 License
 ----
 
-MIT
 
-**Mais um curso da UpInside Treinamentos, faça bom uso!**
-
-[//]:#
-[Gustavo Web]: <mailto:gustavo@upinside.com.br>
-[Robson V. Leite]: <mailto:robson@upinside.com.br>
-[UpInside Treinamentos]: <https://www.upinside.com.br>
-[phpMailer]: <https://github.com/PHPMailer/PHPMailer>
